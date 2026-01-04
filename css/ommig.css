@@ -294,7 +294,8 @@ a {
   }
 
   .wrap {
-    margin-top: 5.5rem;
+    margin-top: 10rem;
+    padding: 0px;
   }
 
   .layout {
