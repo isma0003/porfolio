@@ -3,10 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="generel.css" />
-    <title>Document</title>
+    <title>Isabel Maibom – Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/forside.css" />
   </head>
   <body>
-    <h1>Isabel Maibom</h1>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="Gå til forside">IM</a>
+
+      <nav class="nav" aria-label="Hovedmenu">
+        <button
+          class="burger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="menu" id="menu">
+          <li><a href="index.html">FORSIDE</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="ommig.html">OM MIG</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1 class="hero-title hero-title--desktop">
+            <span class="isab">ISAB</span><span class="el">EL</span>
+            <span class="maibom">MAIBOM</span>
+          </h1>
+
+          <div class="hero-copy">
+            <p>
+              WELCOME TO MY PORTFOLIO: THIS IS MY WORK FROM MMD 1. SEMESTER & A
+              LITTLE ABOUT ME
+            </p>
+            <a class="read-more" href="portfolio.html">READ MORE…</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image">
+            <h1 class="hero-title hero-title--mobile">
+              <span class="isabel">ISABEL</span>
+              <span class="maibom">MAIBOM</span>
+            </h1>
+
+            <div class="hero-portfolio">PORTFOLIO</div>
+          </div>
+        </div>
+
+        <div class="hero-text-mobile">
+          <p>
+            WELCOME TO MY PORTFOLIO: THIS IS MY WORK FROM MMD 1. SEMESTER & A
+            LITTLE ABOUT ME
+          </p>
+          <a class="read-more" href="portfolio.html">READ MORE…</a>
+        </div>
+      </section>
+      <section class="next-section">
+        <h2>Næste sektion</h2>
+        <p>Her starter dit næste indhold.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>INFO</h4>
+          <a href="index.html">Forside</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="ommig.html">Om mig</a>
+        </div>
+
+        <div class="footer-col footer-col--center">
+          <h4>ISABEL MAIBOM</h4>
+          <p>MMD</p>
+          <p>1. SEM</p>
+        </div>
+
+        <div class="footer-col footer-col--center">
+          <h4>CONNECT</h4>
+          <a
+            href="https://www.instagram.com/isabelmaibom/"
+            target="_blank"
+            rel="noopener"
+          >
+            @isabelmaibom
+          </a>
+        </div>
+
+        <div class="footer-col footer-col--right">
+          <h4>MULTIMEDIEDESIGN</h4>
+          <p>KEA</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="javascript/main.js" defer></script>
   </body>
 </html>

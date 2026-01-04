@@ -1,0 +1,161 @@
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.hero-left {
+  display: none;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2rem 1.2rem 1.2rem;
+}
+
+.hero-image {
+  position: relative;
+  width: min(82vw, 360px);
+  aspect-ratio: 3 / 4;
+  background: url("../img/forside/forside.png") center / cover no-repeat;
+}
+
+.hero-title {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  display: flex;
+  gap: 0.2em;
+}
+
+.hero-title--mobile {
+  position: absolute;
+  left: 1rem;
+  top: 38%;
+  transform: translateY(-50%);
+  font-size: 2.2rem;
+  z-index: 2;
+}
+
+.isab {
+  color: #111;
+}
+.el {
+  color: #fff;
+}
+.isabel {
+  color: #111;
+}
+.maibom {
+  color: #fff;
+  margin-left: 0.25em;
+}
+
+.hero-portfolio {
+  position: absolute;
+  left: 55%;
+  top: 49%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  z-index: 2;
+}
+
+.hero-text-mobile {
+  padding: 0 1.6rem 2rem;
+}
+
+.hero-text-mobile p {
+  margin: 0 0 1.2rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.22;
+}
+
+.read-more {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+
+.next-section {
+  padding: 6rem 10vw;
+  background: #fff;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 31% 69%;
+    grid-template-rows: 1fr;
+    overflow: visible;
+  }
+
+  .hero-left {
+    display: block;
+    position: relative;
+    background: #fff;
+  }
+
+  .hero-right {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    background-position: 45% 18%;
+  }
+
+  .hero-text-mobile,
+  .hero-title--mobile {
+    display: none;
+  }
+
+  .hero-title--desktop {
+    position: absolute;
+    left: 160px;
+    top: 48%;
+    transform: translateY(-50%);
+    font-size: 120px;
+    width: 1280px;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .hero-copy {
+    position: absolute;
+    left: 50px;
+    bottom: 85px;
+    max-width: 420px;
+  }
+
+  .hero-copy p {
+    margin: 0 0 18px;
+    font-weight: 800;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .hero-portfolio {
+    left: 26%;
+    top: 56%;
+    font-size: 46px;
+  }
+}
+
+@media (min-width: 1512px) {
+  .hero-title--desktop {
+    left: 170px;
+    font-size: 126px;
+    width: 1320px;
+  }
+}
