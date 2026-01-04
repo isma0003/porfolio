@@ -64,7 +64,21 @@
   font-size: 1.6rem;
   font-weight: 700;
 }
+.knap {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #fdebf6, #b4b4b4);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.knap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 .tema-section {
   background: #fff;
 }
