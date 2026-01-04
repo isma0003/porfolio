@@ -46,7 +46,6 @@ a {
   z-index: 1000;
 }
 
-/* Burger */
 .burger {
   width: 30px;
   display: flex;
@@ -149,6 +148,10 @@ a {
 
 .footer-col--right {
   text-align: right;
+}
+.site-footer a {
+  display: block;
+  margin: 1.2rem 0;
 }
 
 @media (min-width: 1024px) {
