@@ -6,6 +6,7 @@ body {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
   color: #111;
 }
@@ -20,7 +21,7 @@ a {
   top: 0;
   z-index: 100;
   background: #fff;
-
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,6 +55,7 @@ a {
 
   background: transparent;
   border: 0;
+
   padding: 0;
   cursor: pointer;
 
@@ -67,7 +69,6 @@ a {
   display: block;
 }
 
-/* Menu (mobil lukket) */
 .menu {
   display: none;
   list-style: none;
@@ -82,7 +83,6 @@ a {
   text-transform: uppercase;
 }
 
-/* Menu (mobil åben) */
 .nav.open .menu {
   display: flex;
   position: absolute;
