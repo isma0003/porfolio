@@ -1,5 +1,5 @@
 :root {
-  --pink: #f6dff0;
+  --pink: #fdebf6;
   --line: rgba(0, 0, 0, 0.35);
   --text: #111;
 }
@@ -9,33 +9,9 @@ body {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  color: var(--text);
-  background: var(--pink);
-}
-
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--pink);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 1rem 1.1rem;
-}
-
-.logo {
-  font-family: "Italianno", cursive;
-  font-size: 2.4rem;
-  line-height: 1;
 }
 
 .nav {
@@ -75,7 +51,7 @@ a {
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--pink);
   padding: 14px 16px;
   border: 1px solid var(--line);
 }
@@ -94,6 +70,15 @@ a {
   background: var(--pink);
 }
 
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.rail {
+  display: none;
+}
+
 .divider {
   height: 1px;
   background: var(--line);
@@ -104,14 +89,6 @@ a {
   grid-template-columns: 1fr;
   gap: 1.2rem;
   padding: 1.2rem;
-}
-
-.hero-collage {
-  display: none;
-}
-
-.hero-content {
-  padding: 0.2rem 0.2rem;
 }
 
 .hero-title {
@@ -138,7 +115,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .meta-right {
@@ -173,22 +150,27 @@ a {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .hero-portrait img {
-  width: 80%;
+  width: 100%;
   height: 320px;
   object-fit: cover;
   display: block;
   border: 1px solid var(--line);
+  background: var(--pink);
 }
 
-.two-col {
+.mid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1.2rem;
+}
+.mid-text {
+  display: grid;
+  gap: 2.2rem;
 }
 
 .h3 {
@@ -199,12 +181,13 @@ a {
   letter-spacing: 0.06em;
 }
 
-.image-block img {
+.mid-image img {
   width: 100%;
-  height: 260px;
+  height: 300px;
   object-fit: cover;
   display: block;
   border: 1px solid var(--line);
+  background: var(--pink);
 }
 
 .bottom-grid {
@@ -275,40 +258,18 @@ a {
   opacity: 1;
 }
 
-.footer-links {
-  padding: 1.2rem;
-  border-top: 1px solid var(--line);
-  background: #fff;
-  display: grid;
-  gap: 0.8rem;
-}
-
-.footer-links a {
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-}
-
 @media (min-width: 1024px) {
-  .header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: transparent;
-    padding: 1.6rem 2rem;
-  }
-
   .burger {
     display: none;
   }
+
   .menu {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 16px;
   }
+
   .nav.open .menu {
     position: static;
     background: transparent;
@@ -320,24 +281,36 @@ a {
     margin-top: 5.5rem;
   }
 
+  .layout {
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+  }
+
+  .rail {
+    display: block;
+    border-right: 1px solid var(--line);
+    background-image: url("../img/ommig/insta.webp");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: top center;
+
+    min-height: 100%;
+  }
+
+  .content {
+    min-width: 0;
+  }
+
   .hero {
-    grid-template-columns: 320px 1fr 360px;
-    gap: 2rem;
-    padding: 1.8rem;
+    grid-template-columns: 1fr 360px;
+    gap: 0;
+    padding: 0;
     align-items: start;
   }
 
-  .hero-collage {
-    display: block;
-  }
-
-  .hero-collage img {
-    width: 100%;
-    height: 100%;
-    min-height: 620px;
-    object-fit: cover;
-    display: block;
-    border: 1px solid var(--line);
+  .hero-content {
+    padding: 1.8rem;
+    border-right: 1px solid var(--line);
   }
 
   .hero-title {
@@ -345,28 +318,40 @@ a {
     line-height: 0.88;
   }
 
+  .hero-portrait {
+    padding: 1.8rem;
+  }
+
   .hero-portrait img {
     height: 360px;
   }
 
-  .two-col {
+  .mid {
     grid-template-columns: 1fr 360px;
-    align-items: start;
-    gap: 2rem;
-    padding: 1.8rem;
+    gap: 0;
+    padding: 0;
   }
 
-  .image-block img {
-    height: 220px;
+  .mid-text {
+    padding: 1.8rem;
+    border-right: 1px solid var(--line);
+    gap: 4.2rem;
+  }
+
+  .mid-image {
+    padding: 1.8rem;
+  }
+  .mid-image img {
+    height: 340px;
   }
 
   .bottom-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .footer-links {
-    grid-template-columns: 1fr;
-    width: 320px;
-    background: #fff;
+  .box {
+    padding: 1.8rem;
+  }
+  .bottom-grid .box:first-child {
+    border-right: 1px solid var(--line);
   }
 }

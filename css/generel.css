@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  background: #fff;
+  background: #fdebf6;
 }
 
 body {
@@ -27,9 +27,15 @@ a {
 }
 
 .logo {
-  font-family: "Italianno", cursive;
-  font-size: 3rem;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.logo-svg {
+  width: 1000px;
+  height: 100px;
+  display: block;
 }
 
 .nav {
@@ -150,7 +156,6 @@ a {
   text-underline-offset: 4px;
 }
 
-/* Kolonne-justering */
 .footer-col--center {
   text-align: center;
 }
@@ -159,7 +164,6 @@ a {
   text-align: right;
 }
 
-/* Mobil */
 @media (max-width: 800px) {
   .site-footer {
     padding: 4rem 0;
