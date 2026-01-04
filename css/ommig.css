@@ -306,12 +306,13 @@ a {
   .rail {
     display: block;
     min-height: 100%;
+    min-width: 100%;
 
     border-right: 1px solid var(--line);
 
     background-image: url("../img/ommig/insta.webp");
     background-repeat: repeat-y;
-    background-size: cover;
+    background-size: contain;
     background-position: top center;
   }
 
@@ -337,7 +338,7 @@ a {
   }
 
   .hero-portrait img {
-    height: 360px;
+    height: 390px;
   }
 
   .mid {
