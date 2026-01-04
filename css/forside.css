@@ -20,7 +20,7 @@
   position: relative;
   width: min(82vw, 360px);
   aspect-ratio: 3 / 4;
-  background: url("../img/forside/forside.png") center / cover no-repeat;
+  background: url("../img/forside/forside.webp") center / cover no-repeat;
 }
 
 .hero-title {
