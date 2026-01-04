@@ -1,80 +1,148 @@
-.grid_1-1 img {
+.portfolio {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
 }
 
-.grid_1-1 {
+.portfolio-hero {
+  padding: 4.8rem 1.3rem 2rem;
+  background: #fff;
+}
+
+.portfolio-title {
+  margin: 0 0 1rem;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.tema-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.tema-nav-link {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.tema-hero-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tema-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-weight: 800;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.portfolio-sub {
+  margin: 0;
+  max-width: 100%;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.down-arrow {
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.knap {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #fdebf6, #b4b4b4);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.knap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.tema-section {
+  background: #fff;
+}
+
+.tema-section--pink {
+  background: #fdebf6;
+}
+
+.tema-inner {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 4rem 0;
   display: grid;
-  padding: 20px;
+  gap: 2.2rem;
+  align-items: center;
 }
 
-.grid_1-1 h2,
-.grid_1-1 p {
-  text-align: center;
+.tema-media img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  background: #fff;
 }
 
-.grid_1-1 h2 {
-  padding: 30px 20px 20px 20px;
+.tema-text h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.grid_1-1 p {
-  text-align: justify;
-  line-height: 1.4;
-  padding: 0 5px;
+.tema-text p {
+  margin: 0;
+  max-width: 65ch;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 @media (min-width: 1024px) {
-  main {
-    margin-left: 70px;
-    margin-right: 10px;
+  .portfolio-hero {
+    padding: 6.2rem 6vw 2.5rem;
   }
 
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    max-width: 1300px;
-    margin: 50px auto;
-    padding: 10px;
+  .portfolio-title {
+    font-size: 6.2rem;
+    margin-bottom: 1.2rem;
   }
 
-  .grid_1-1 img {
-    width: 90%;
+  .tema-nav {
+    gap: 3rem;
+    margin-bottom: 1.3rem;
   }
 
-  .text1 {
-    display: flex;
-    flex-direction: column;
+  .tema-hero-row {
     justify-content: center;
-    max-width: 500px;
-    padding-left: 60px;
+    gap: 2rem;
   }
 
-  .text2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 500px;
-    padding-left: 60px;
+  .portfolio-sub {
+    font-size: 1rem;
   }
 
-  .grid_1-1 h2 {
-    margin-bottom: 20px;
-    text-align: left;
-    padding: 0;
-  }
-
-  .grid_1-1 p {
-    padding: 0;
-    text-align: left;
-  }
-
-  .grid_1-1:nth-child(even) .owners,
-  .grid_1-1:nth-child(even) .history,
-  .grid_1-1:nth-child(even) .bakery,
-  .grid_1-1:nth-child(even) .wineandbeer {
-    order: 2;
+  .tema-inner--two-col {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.2rem;
   }
 }

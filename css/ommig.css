@@ -3,7 +3,9 @@
   --line: rgba(0, 0, 0, 0.35);
   --text: #111;
 }
-
+.header {
+  background-color: #fdebf6;
+}
 html,
 body {
   height: 100%;
@@ -23,6 +25,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 7px;
+
   background: transparent;
   border: 0;
   padding: 0;
@@ -43,24 +46,26 @@ a {
   padding: 0;
 }
 
-.nav.open .menu {
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: 44px;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-  background: var(--pink);
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-}
-
 .menu a {
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.nav.open .menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 44px;
+
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+
+  background: var(--pink);
+  padding: 14px 16px;
+  border: 1px solid var(--line);
 }
 
 .wrap {
@@ -79,6 +84,10 @@ a {
   display: none;
 }
 
+.content {
+  min-width: 0;
+}
+
 .divider {
   height: 1px;
   background: var(--line);
@@ -93,10 +102,10 @@ a {
 
 .hero-title {
   margin: 0;
+  font-size: 2.6rem;
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 0.92;
-  font-size: 2.6rem;
   text-transform: uppercase;
 }
 
@@ -111,34 +120,20 @@ a {
   border: 1px solid var(--text);
   border-radius: 999px;
   padding: 0.25rem 1.2rem;
+
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
   background: rgba(255, 255, 255, 0.15);
 }
 
 .meta-right {
   font-weight: 900;
-  text-transform: uppercase;
   font-size: 0.85rem;
   line-height: 1.1;
-}
-
-.h2 {
-  margin: 1rem 0 0.4rem;
-  font-size: 1.1rem;
-  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.p {
-  margin: 0 0 0.8rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.25;
 }
 
 .btn {
@@ -147,9 +142,11 @@ a {
   border: 1px solid var(--text);
   border-radius: 999px;
   padding: 0.45rem 2.6rem;
+
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   background: rgba(255, 255, 255, 0.15);
 }
 
@@ -162,12 +159,29 @@ a {
   background: var(--pink);
 }
 
+.h2 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.p {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .mid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1.2rem;
 }
+
 .mid-text {
   display: grid;
   gap: 2.2rem;
@@ -177,8 +191,8 @@ a {
   margin: 0 0 0.5rem;
   font-size: 0.95rem;
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .mid-image img {
@@ -202,6 +216,14 @@ a {
   padding: 1.2rem;
 }
 
+.h4 {
+  margin: 1.2rem 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .list {
   display: grid;
   gap: 0.55rem;
@@ -212,17 +234,10 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-}
 
-.h4 {
-  margin: 1.2rem 0 0.6rem;
+  font-weight: 800;
   font-size: 0.85rem;
-  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .lang {
@@ -234,10 +249,11 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+
   margin-bottom: 0.5rem;
+  font-weight: 900;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
 
 .dots {
@@ -288,17 +304,14 @@ a {
 
   .rail {
     display: block;
+    min-height: 100%;
+
     border-right: 1px solid var(--line);
+
     background-image: url("../img/ommig/insta.webp");
     background-repeat: repeat-y;
     background-size: cover;
     background-position: top center;
-
-    min-height: 100%;
-  }
-
-  .content {
-    min-width: 0;
   }
 
   .hero {
@@ -341,6 +354,7 @@ a {
   .mid-image {
     padding: 1.8rem;
   }
+
   .mid-image img {
     height: 340px;
   }
@@ -348,9 +362,11 @@ a {
   .bottom-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .box {
     padding: 1.8rem;
   }
+
   .bottom-grid .box:first-child {
     border-right: 1px solid var(--line);
   }
