@@ -8,7 +8,7 @@
 }
 
 .portfolio-title {
-  margin: 2 0 1rem;
+  margin: 0 0 1rem;
   font-size: 3.2rem;
   font-weight: 900;
   letter-spacing: -0.02em;
@@ -16,8 +16,8 @@
 
 .tema-nav {
   display: flex;
-  gap: 1.1rem;
   flex-wrap: wrap;
+  gap: 1.1rem;
   margin-bottom: 1.2rem;
 }
 
@@ -32,16 +32,8 @@
 .tema-hero-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-}
-
-.portfolio-sub {
-  margin: 0;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.95rem;
+  flex-wrap: wrap;
 }
 
 .tema-pill {
@@ -54,6 +46,17 @@
   font-weight: 800;
   text-decoration: none;
   width: fit-content;
+}
+
+.portfolio-sub {
+  margin: 0;
+  max-width: 100%;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .down-arrow {
@@ -78,17 +81,17 @@
 }
 
 .tema-kicker {
+  margin: 0 0 0.35rem;
   font-size: 0.95rem;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin: 0 0 0.35rem;
 }
 
 .tema-title {
+  margin: 0;
   font-size: 2.6rem;
   font-weight: 900;
-  margin: 0;
 }
 
 .tema-sub {
@@ -126,30 +129,26 @@
 
 .card-link {
   display: inline-block;
+  width: fit-content;
   font-weight: 900;
   text-decoration: underline;
   text-underline-offset: 6px;
-  width: fit-content;
 }
 
-#tema2 .tema-band {
+#tema2 .tema-band,
+#tema5 .tema-band {
   background: #fdebf6;
   color: #111;
 }
 
 #tema3 .tema-band {
-  background: #ffffff;
+  background: #fff;
   color: #111;
 }
 
 #tema4 .tema-band {
   background: #5c5c5c;
   color: #f6e4f2;
-}
-
-#tema5 .tema-band {
-  background: #fdebf6;
-  color: #111;
 }
 
 @media (min-width: 1024px) {
