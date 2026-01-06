@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setOpen = (open) => {
     nav.classList.toggle("open", open);
-    burger.setAttribute("aria-expanded", open);
   };
 
   burger.addEventListener("click", (e) => {

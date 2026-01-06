@@ -40,7 +40,13 @@ a {
   height: auto;
   display: block;
 }
-
+.hero-logo {
+  position: absolute;
+  top: -30px;
+  margin-left: 10px;
+  width: 120px;
+  transform: none;
+}
 .nav {
   position: relative;
   z-index: 1000;
